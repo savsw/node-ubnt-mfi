@@ -1,0 +1,29 @@
+{
+  "name": "ubnt-mfi",
+  "version": "0.0.1",
+  "description": "Node.js library for communicating with a Ubiquiti mFi controller",
+  "main": "index.js",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "request": "^2.61.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/savsw/node-ubnt-mfi"
+  },
+  "keywords": [
+    "mFi",
+    "ubiquiti",
+    "ubnt"
+  ],
+  "author": "Savannah Scriptworks",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/savsw/node-ubnt-mfi/issues"
+  },
+  "homepage": "https://github.com/savsw/node-ubnt-mfi"
+}

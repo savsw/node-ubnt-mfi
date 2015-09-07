@@ -1,0 +1,5 @@
+{
+  "validateQuoteMarks" : true,
+  "disallowSemicolons" : true,
+  "validateIndentation": 2
+}
