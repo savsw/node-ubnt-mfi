@@ -42,6 +42,7 @@ mFi.prototype._login = function(){
   var that = this
   return new Promise(function(resolve, reject){
     request.post({
+      timeout: 1500,
       strictSSL: false,
       url: that._url('/login'),
       jar: that._J,
@@ -49,7 +50,7 @@ mFi.prototype._login = function(){
     }, function(e,r,b){
       if(e) return reject(e)
       if(r.statusCode == 302 && r.headers.location == that._url('/manage')) return resolve()
-      reject()
+      reject(r.statusCode)
     })
   })
 }
@@ -67,7 +68,7 @@ mFi.prototype._getUrl = function(url){
     **************************************************/
     return new Promise(function(resolve, reject){
       request.get({
-        strictSSL: false, url: that._url(url), jar: that._J
+        timeout: 1500, strictSSL: false, url: that._url(url), jar: that._J
       }, function(e,r,b){
         if(e) return reject(e)
         if(r.statusCode == 200) return resolve(reformat(b))
